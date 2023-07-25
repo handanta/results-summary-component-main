@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main class="container">
+      <section class="result">
+        <p class="result-head section-head">Your Result</p>
+        <h1 class="score">76</h1>
+        <div class="rank">
+          <h2>Great</h2>
+          <p class="description parts">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+      </section>
+      <section class="details">
+        <ul class="details-list">
+          <p class="details-head section-head">Summary</p>
+          <li class="parts reaction">
+            <div class="icon-container">
+              <ion-icon class="details-icon" name="flash-outline"></ion-icon
+              >Reaction
+            </div>
+            <span>80</span>
+          </li>
+          <li class="parts memory">
+            <div class="icon-container">
+              <ion-icon
+                class="details-icon"
+                name="extension-puzzle-outline"
+              ></ion-icon
+              >Memory
+            </div>
+            <span>92</span>
+          </li>
+          <li class="parts verbal">
+            <div class="icon-container">
+              <ion-icon
+                class="details-icon"
+                name="chatbubble-ellipses-outline"
+              ></ion-icon>
+              Verbal
+            </div>
+            <span>61</span>
+          </li>
+          <li class="parts visual">
+            <div class="icon-container">
+              <ion-icon
+                class="details-icon"
+                name="chatbubble-ellipses-outline"
+              ></ion-icon>
+              Visual
+            </div>
+            <span>72</span>
+          </li>
+        </ul>
+
+        <button class="btn">Continue</button>
+      </section>
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

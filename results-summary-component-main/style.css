@@ -1,0 +1,271 @@
+:root {
+  /* Primary */
+  --clr-light-red: hsla(0, 100%, 67%, 0.1);
+  --clr-orange: hsla(39, 100%, 56%, 0.1);
+  --clr-greenteal: hsla(166, 100%, 37%, 0.1);
+  --clr-cobalt: hsla(234, 85%, 45%, 0.1);
+  --clr-reaction: hsla(0, 100%, 67%, 0.8);
+  --clr-memory: hsla(39, 100%, 56%, 0.8);
+  --clr-verbal: hsla(166, 100%, 37%, 0.8);
+  --clr-visual: hsla(234, 85%, 45%, 0.8);
+  /* Gradient */
+  --clr-gradient-purple-bg: hsl(252, 100%, 67%);
+  --clr-gradient-blue-bg: hsl(241, 81%, 54%);
+  --clr-gradient-violet-circle: hsla(256, 72%, 46%, 1);
+  --clr-gradient-blue-cirlce: hsla(241, 72%, 46%, 0);
+  /* Neutral */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-pale-blue: hsl(221, 100%, 96%);
+  --clr-lavender: hsl(241, 100%, 89%);
+  --clr-gray-blue: hsl(224, 30%, 27%);
+  /* Font */
+  --ff: "Hanken Grotesk", sans-serif; /* 500, 700, 800 */
+  --fs-paragraph: 1.8rem; /* 18px */
+}
+
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+html {
+  font-size: 62.75%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+/* /////////////////////////////////////// */
+/* CHALLENGE START */
+/* /////////////////////////////////////// */
+body {
+  margin: 2rem 0 0 2rem;
+  font-family: var(--ff);
+  font-weight: 500;
+  font-size: var(--fs-paragraph);
+}
+.container {
+  display: flex;
+  max-width: 48rem;
+  border-radius: 36px;
+  box-shadow: 2rem 2rem 5rem rgba(48, 59, 90, 0.107);
+}
+.section-head {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.parts {
+  font-size: 1.2rem;
+}
+
+.result {
+  width: 50%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 3.6rem;
+  border-radius: 36px;
+  align-items: center;
+  text-align: center;
+
+  background: linear-gradient(
+    var(--clr-gradient-purple-bg),
+    var(--clr-gradient-blue-bg)
+  );
+}
+.result-head {
+  color: #aaa;
+  margin-bottom: 2rem;
+  margin-top: 1.8rem;
+}
+.score {
+  font-weight: 700;
+  font-size: 5.6rem;
+  background: linear-gradient(
+    var(--clr-gradient-violet-circle),
+    var(--clr-gradient-blue-cirlce)
+  );
+  padding: 3rem 4rem;
+  border-radius: 50%;
+  margin-bottom: 1.8rem;
+  position: relative;
+}
+.score::after {
+  content: "of 100";
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #aaa;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -150%);
+}
+.rank {
+  padding: 2.2rem 0;
+}
+.rank h2 {
+  margin-bottom: 0.8rem;
+}
+.rank p {
+  color: #aaa;
+}
+
+/* DETAILS SECTION */
+.details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0.5rem;
+}
+.details-head {
+  margin-bottom: 1.8rem;
+  color: #555;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+.details-list {
+  list-style: none;
+  padding: 1.5rem;
+}
+.reaction,
+.memory,
+.verbal,
+.visual {
+  padding: 1rem 1.5rem 1rem 0;
+  /* background-color: var(--clr-gray-blue); */
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reaction {
+  background-color: var(--clr-light-red);
+  color: var(--clr-reaction);
+}
+
+.memory {
+  background-color: var(--clr-orange);
+  color: var(--clr-memory);
+}
+
+.verbal {
+  background-color: var(--clr-greenteal);
+  color: var(--clr-verbal);
+}
+
+.visual {
+  background-color: var(--clr-cobalt);
+  color: var(--clr-visual);
+}
+.details-list span {
+  color: #333;
+}
+.details-list span::after {
+  content: " / 100";
+  color: #aaa;
+}
+.details-icon {
+  margin: 0 1rem 0 1.5rem;
+}
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+.btn {
+  background-color: var(--clr-gray-blue);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem;
+  margin: 0 2rem 3rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.btn:hover {
+  background: linear-gradient(
+    var(--clr-gradient-purple-bg),
+    var(--clr-gradient-blue-bg)
+  );
+}
+
+/* /////////////////////////////////////// */
+/* MOBILE DESIGN */
+/* /////////////////////////////////////// */
+@media (max-width: 376px) {
+  /* html {
+    font-size: 50%;
+  } */
+  body {
+    display: contents;
+    height: 100vh;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .result {
+    width: 100%;
+    border-radius: 0 0 36px 36px;
+  }
+  .details {
+    width: 100%;
+  }
+}
